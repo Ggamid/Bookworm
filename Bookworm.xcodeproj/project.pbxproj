@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876CEF912C0D0E6D00BCEC17 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CEF902C0D0E6D00BCEC17 /* DetailView.swift */; };
 		87A6EDAA2C0B9D4D007DBDEA /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6EDA92C0B9D4D007DBDEA /* BookwormApp.swift */; };
 		87A6EDAC2C0B9D4D007DBDEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6EDAB2C0B9D4D007DBDEA /* ContentView.swift */; };
 		87A6EDAE2C0B9D4F007DBDEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A6EDAD2C0B9D4F007DBDEA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		876CEF902C0D0E6D00BCEC17 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		87A6EDA62C0B9D4D007DBDEA /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6EDA92C0B9D4D007DBDEA /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		87A6EDAB2C0B9D4D007DBDEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				87A6EDA92C0B9D4D007DBDEA /* BookwormApp.swift */,
 				87A6EDB92C0BAB85007DBDEA /* AddBookView.swift */,
+				876CEF902C0D0E6D00BCEC17 /* DetailView.swift */,
 				87A6EDBB2C0BB06E007DBDEA /* RatingView.swift */,
 				87A6EDBD2C0BB3E1007DBDEA /* EmojiRatingView.swift */,
 				87A6EDAB2C0B9D4D007DBDEA /* ContentView.swift */,
@@ -152,6 +155,7 @@
 				87A6EDAC2C0B9D4D007DBDEA /* ContentView.swift in Sources */,
 				87A6EDAA2C0B9D4D007DBDEA /* BookwormApp.swift in Sources */,
 				87A6EDB82C0BAB0A007DBDEA /* Book.swift in Sources */,
+				876CEF912C0D0E6D00BCEC17 /* DetailView.swift in Sources */,
 				87A6EDBC2C0BB06F007DBDEA /* RatingView.swift in Sources */,
 				87A6EDBE2C0BB3E1007DBDEA /* EmojiRatingView.swift in Sources */,
 				87A6EDBA2C0BAB85007DBDEA /* AddBookView.swift in Sources */,

@@ -12,24 +12,38 @@ struct ContentView: View {
     @Query var books: [Book]
     
     @State var showingAddScreen = false
+    @State var sortType = 0
+    
+    
     
     var body: some View {
         NavigationStack {
-            List(books){ book in
-                HStack{
-                    EmojiRatingView(rating: book.rating)
-                        .font(.largeTitle)
-                    
-                    VStack(alignment: .leading){
-                        Text(book.title)
-                            .bold()
-                        Text(book.author)
+            List{
+                ForEach(books){book in
+                    NavigationLink {
+                        DetailView(book: book)
+                    } label: {
+                        HStack{
+                            EmojiRatingView(rating: book.rating)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading){
+                                Text(book.title)
+                                    .bold()
+                                Text(book.author)
+                            }
+                        }
                     }
                 }
-                
+                .onDelete(perform: deleteBook)
             }
             .navigationTitle("Bookworm")
             .toolbar {
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add Book", systemImage: "plus") {
                         showingAddScreen.toggle()
@@ -45,4 +59,13 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+extension ContentView {
+    func deleteBook(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+            modelContext.delete(book)
+        }
+    }
 }
