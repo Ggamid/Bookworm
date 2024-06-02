@@ -18,7 +18,7 @@ struct AddBookView: View {
     @State private var genre = "Fantasy"
     @State private var review = ""
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller", "Historical", "Finance", "Self-improvement"]
     
     var body: some View {
         NavigationStack {
@@ -37,11 +37,7 @@ struct AddBookView: View {
                 Section("Write a review") {
                     TextEditor(text: $review)
 
-                    Picker("Rating", selection: $rating) {
-                        ForEach(0..<6) {
-                            Text(String($0))
-                        }
-                    }
+                    RatingView(rating: $rating)
                 }
 
                 Section {
