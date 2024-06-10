@@ -15,7 +15,7 @@ struct DetailView: View {
     
     @State var showingAlert = false
     
-    let book: Book
+    @Bindable var book: Book
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
@@ -49,10 +49,15 @@ struct DetailView: View {
             Text(book.date, format: Date.FormatStyle().year().month().day().hour().minute())
                 .foregroundStyle(.gray)
             
-            Text(book.review)
+            TextField(book.review, text: $book.review, axis: .vertical)
                 .padding()
+                .frame(maxWidth: .infinity)
+                .multilineTextAlignment(.center)
+                .padding()
+                
+
             
-            RatingView(rating: .constant(book.rating))
+            RatingView(rating: $book.rating)
                 .font(.largeTitle)
             
         }
